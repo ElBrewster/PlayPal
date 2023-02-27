@@ -8,7 +8,12 @@ describe("all activities page", () => {
         .find(".activity-card")
         .should("have.length", 10);
     });
-    it("Should render activity card correctly ", () => {});
+    it("Should render activity card correctly ", () => {
+      //need to stub information in order to test
+      //have title
+      //have img and icons
+      //img link is correct
+    });
     it("When user click activities card, it should have the correct URL", () => {});
   });
   describe("When API return an error", () => {
