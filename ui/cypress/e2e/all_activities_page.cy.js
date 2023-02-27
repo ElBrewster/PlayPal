@@ -9,7 +9,8 @@ describe("all activities page", () => {
         .should("have.length", 10);
     });
     it("Should render activity card correctly ", () => {
-      //need to stub information in order to test
+      cy.get(".activity-container").find(".activity-card").should("be.visible");
+
       //have title
       //have img and icons
       //img link is correct
