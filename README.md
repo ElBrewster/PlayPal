@@ -10,7 +10,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/ElBrewster/PlayPals">
-    Add Image or Logo of the project
+		<img alt="logo" src="/ui/public"/>
   </a>
 
 <h3 align="center">PlayPals</h3>
