@@ -4,7 +4,8 @@ describe("profile page", () => {
   });
   describe("When profile page render correctly", () => {
     it("Should render activity card correctly ", () => {
-      cy.get(".header-nav");
+      cy.get("nav").should("be.visible");
+
       //header nav exist // we test this in other file already
       cy.get(".report-h2").contains(" Kiddo Report Card");
       //header say 'Kiddo Report Card'

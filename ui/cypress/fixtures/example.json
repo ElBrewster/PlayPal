@@ -1,5 +1,16 @@
 {
-  "name": "Using fixtures to represent data",
-  "email": "hello@cypress.io",
-  "body": "Fixtures are a great way to mock data for responses to routes"
+  "activities": [
+    {
+      "id": 1,
+      "img_url": "https://nodecoders.s3.us-west-2.amazonaws.com/activitiesImg/activitiesPNG/paper-cutting.png",
+      "start_age": 24,
+      "end_age": 48,
+      "name": "paper cutting",
+      "materials": "paper, child-scissor, bin",
+      "instructions": "Have child hold scissors with whichever hand they choose, cut paper into whatever shape they want in any size they want",
+      "indoor": true,
+      "outdoor": false,
+      "motor_skills": "fine"
+    }
+  ]
 }
