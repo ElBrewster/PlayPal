@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import ActivityCard from "../thumbnailActivity/ThumbnailActivityCard";
-import activitiesData from "../../apiCalls/dummyData";
+import React from "react";
+import ActivityCard from "../thumbnailActivity/thumbnailActivityCard";
 import "./ToDos.scss";
 
 export default function ToDos({ savedActivities }) {

@@ -1,5 +1,4 @@
 import "./App.scss";
-import activitiesData from "../../apiCalls/dummyData";
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import HeaderNav from "../headerNav/HeaderNav";

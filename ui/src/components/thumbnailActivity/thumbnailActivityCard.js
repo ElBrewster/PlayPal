@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import "./ThumbnailActivityCard.scss";
-import { AiFillCheckCircle, AiOutlineHeart, AiFillHeart, AiOutlineCheckCircle } from "react-icons/ai";
+import "./thumbnailActivityCard.scss";
 import { BsBookmark, BsFillBookmarkFill } from "react-icons/bs";
 
 

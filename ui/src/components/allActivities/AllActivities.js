@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
 import "./AllActivities.scss";
-import ActivityCard from "../thumbnailActivity/ThumbnailActivityCard.js";
+import ActivityCard from "../thumbnailActivity/thumbnailActivityCard";
 
 export default function AllActivities({ activities, savedActivities, setSavedActivities }) {
   const [selectedActivities, setSelectedActivities] = useState(activities);
