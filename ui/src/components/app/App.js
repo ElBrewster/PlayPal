@@ -1,5 +1,5 @@
 import "./App.scss";
-import activitiesData from "../../apiCalls/dummyData";
+// import activitiesData from "../../apiCalls/dummyData";
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import HeaderNav from "../headerNav/HeaderNav";
@@ -13,12 +13,11 @@ import { getAllActivities } from "../../apiCalls/apiCalls";
 
 function App() {
   const [activities, setActivityData] = useState([]);
-
   const [favorites, setFavorites] = useState([]);
   
   //filtered to-do (bookmark)
   const [savedActivities, setSavedActivities] = useState([]);
-  console.log("savedActivities in App: ", savedActivities)
+  console.log("savedActivities", savedActivities)
 
   const [finishedActivities, setFinishedActivities] = useState([]);
 
