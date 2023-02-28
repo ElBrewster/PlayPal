@@ -14,6 +14,7 @@
   </a>
 
 <h3 align="center">PlayPals</h3>
+<img width="416" alt="Screen Shot 2023-02-27 at 8 44 21 PM" src="https://user-images.githubusercontent.com/113723085/221756939-eb2dde5f-a79d-4fc1-b395-f9b4ad66aebf.png">
 
   <p align="center">
    PlayPals
