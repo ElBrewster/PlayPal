@@ -51,6 +51,9 @@
 
 ### Preview
 
+<img src="./ui/public/preview.png" alt="preview"/>
+
+### abstract 
 PlayPals is the perfect app for first time moms who are struggling to come up with ideas on safe, fun, and stimulating activities for their child. PlayPals gives a list of activities with that can be filtered through to give you ideas for inside or outside play. The activities are also seperated by gross and fine motor skills.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
