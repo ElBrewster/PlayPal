@@ -1,7 +1,7 @@
 @use "src/index.scss" as *;
 
 .activity-card {
-  background-color: $lightLavendar;
+  background-color: $lightBlue;
 	border-radius: $fifthBorderRadius;
 	border: .1em solid $blueberry;
   display: flex;
@@ -23,12 +23,14 @@
 
 .pics-container{
   align-items: center;
+  background-color: $lightBlue;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
 .tv-dials{
+  background-color: $lightBlue;
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -66,12 +68,14 @@
 }
 
 .heartmark2{
+  background-color: $lightBlue;
   color: $intensePink;
   height: 2em;
   width: 2em;
 }
 
 .bookmark2{
+  background-color: $lightBlue;
   color: $red;
   height: 2em;
   width: 2em;
@@ -82,4 +86,8 @@
 .activity-bookmark{
   background-color: $lightLavendar;
   color: $purpleBerry;
+}
+.heartmark2:hover,
+.bookmark2:hover{
+  color: $candy;
 }
