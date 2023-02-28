@@ -4,8 +4,9 @@ import './Form.scss'
 export default function Form({careGiverName, setCareGiverName, childName, setChildName}) { 
 
     return (
-      <form>
+      <form className="my-form">
         <input
+          className="input-name"
           type='text'
           placeholder='Your Name'
           name='care-giver'
@@ -13,6 +14,7 @@ export default function Form({careGiverName, setCareGiverName, childName, setChi
           onChange={event => setCareGiverName(event.target.value)}
         />
         <input
+          className="input-name"
           type='text'
           placeholder="Your Child's Name"
           name='child'
