@@ -5,7 +5,6 @@ import Form from "../form/Form";
 
 
 export default function LandingPage({careGiverName, setCareGiverName, childName, setChildName}) {
-   
     let navigate = useNavigate()
 
     return (

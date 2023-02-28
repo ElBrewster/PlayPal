@@ -1,35 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import "./ThumbnailActivityCard.scss";
-import { AiFillCheckCircle, AiOutlineHeart, AiFillHeart, AiOutlineCheckCircle } from "react-icons/ai";
+import "./thumbnailActivityCard.scss";
 import { BsBookmark, BsFillBookmarkFill } from "react-icons/bs";
 
 
 export default function ActivityCard({id, name, startAge, endAge, image, activities, savedActivities, setSavedActivities}) {
 
   function addToSavedActivities(grabbedId) {
-	const checked = savedActivities.find(activity => activity.id === grabbedId);
-	if(!checked) {
-		const savedActivity = activities.find(activity => activity.id === grabbedId);
-
-		setSavedActivities(prevState => [...prevState, savedActivity]);
-	} else {
-		return 'oops!';
-	}
+		const checked = savedActivities.find(activity => activity.id === grabbedId);
+		if(!checked) {
+			const savedActivity = activities.find(activity => activity.id === grabbedId);
+			setSavedActivities(prevState => [...prevState, savedActivity]);
+		} 
   }
 
   function removeFromSavedActivities(grabbedId){
-		console.log("remmoved", savedActivities)
-	const unbookMarked = savedActivities.filter(activity => activity.id !== grabbedId);
-	setSavedActivities(unbookMarked);
+		const unbookMarked = savedActivities.filter(activity => activity.id !== grabbedId);
+		setSavedActivities(unbookMarked);
   }
 
   const handleBookMarkClickEmpty = () => {
-	addToSavedActivities(id)
+		addToSavedActivities(id)
   }
 
   const handleBookMarkClickFull = () => {
-	removeFromSavedActivities(id);
+		removeFromSavedActivities(id);
 	}
 
 	return (

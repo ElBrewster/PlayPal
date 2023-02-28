@@ -1,9 +1,7 @@
 import React from 'react';
 import './Form.scss'
 
-export default function Form({careGiverName, setCareGiverName, childName, setChildName}) {
- 
- 
+export default function Form({careGiverName, setCareGiverName, childName, setChildName}) { 
 
     return (
       <form>

@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import ActivityCard from "../thumbnailActivity/ThumbnailActivityCard";
-// import activitiesData from "../../apiCalls/dummyData";
-import "./ToDos.scss";
+import React from "react";
+import ActivityCard from "../thumbnailActivity/thumbnailActivityCard";
+import "./Favorites.scss";
 
-export default function ToDos({ activities, savedActivities, setSavedActivities, childName }) {
+export default function Favorites({ activities, savedActivities, setSavedActivities, childName }) {
   
   const activityCards = savedActivities.map((activity) => {
     return (
