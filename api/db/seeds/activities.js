@@ -94,7 +94,7 @@ exports.seed = async function (knex) {
     {
       id: 7,
       img_url:
-        "https://nodecoders.s3.us-west-2.amazonaws.com/activitiesImg/activitiesPNG/ice-cubes.png",
+        "https://nodecoders.s3.us-west-2.amazonaws.com/activitiesImg/activitiesPNG/colored-ice.png",
       start_age: 24,
       end_age: 48,
       name: "ice painting",
