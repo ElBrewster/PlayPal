@@ -27,7 +27,10 @@
     flex-direction: column;
     gap: 2em;
 }
-
+.filled-heart,
+.biter{
+    background-color: $pink;
+}
 .find,
 .go {
     background-color: $pink;
