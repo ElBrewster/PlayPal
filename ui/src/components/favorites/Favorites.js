@@ -1,9 +1,9 @@
 import React from "react";
 import ActivityCard from "../thumbnailActivity/thumbnailActivityCard";
-import "./ToDos.scss";
+import "./Favorites.scss";
 
-export default function ToDos({ savedActivities }) {
-
+export default function Favorites({ activities, savedActivities, setSavedActivities, childName }) {
+  
   const activityCards = savedActivities.map((activity) => {
     return (
       <ActivityCard
@@ -18,15 +18,16 @@ export default function ToDos({ savedActivities }) {
         indoor={activity.indoor}
         outdoor={activity.outdoor}
         motorSkill={activity.motor_skills}
-        // activities={activities}
-        // setSavedActivities={setSavedActivities}
+        activities={activities}
+        savedActivities={savedActivities}
+        setSavedActivities={setSavedActivities}
       />
     );
   });
 
     return (
         <>
-          <h2 className="to-do-h2">To-Do List</h2>
+          <h2 className="to-do-h2">{childName}'s Favorite Activities</h2>
           <section className="to-do-container">
             {activityCards}
           </section>

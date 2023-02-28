@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
 import "./AllActivities.scss";
@@ -23,7 +23,6 @@ export default function AllActivities({ activities, savedActivities, setSavedAct
     const filteredActivities = activities.filter((act) => {
       return arrayOfInput.every((input) => act[input.value] === true);
     });
-
     setSelectedActivities(filteredActivities);
   };
 

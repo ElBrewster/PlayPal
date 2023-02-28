@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./thumbnailActivityCard.scss";
+import { AiFillCheckCircle, AiOutlineHeart, AiFillHeart, AiOutlineCheckCircle } from "react-icons/ai";
 import { BsBookmark, BsFillBookmarkFill } from "react-icons/bs";
 
 
