@@ -12,8 +12,10 @@ import ErrorPage from "../errorPage/ErrorPage";
 import { getAllActivities } from "../../apiCalls/apiCalls";
 
 function App() {
+  const [careGiverName, setCareGiverName] = React.useState('')
+  const [childName, setChildName] = React.useState('')
   const [activities, setActivityData] = useState([]);
-  const [favorites, setFavorites] = useState([]);
+  
   
   //filtered to-do (bookmark)
   const [savedActivities, setSavedActivities] = useState([]);
@@ -34,20 +36,24 @@ function App() {
     <main className="main-app">
       <HeaderNav />
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<LandingPage careGiverName={careGiverName} 
+            setCareGiverName={setCareGiverName}
+            childName={childName}
+            setChildName={setChildName}/>} />
         <Route
-          path="/Activities"
+          path="/dashboard"
           element={<AllActivities activities={activities} savedActivities={savedActivities} setSavedActivities={setSavedActivities}/>}
         />
         <Route
-          path="/Saved-Activities"
-          element={<ToDos savedActivities={savedActivities} setSavedActivities={setSavedActivities}/>}
+          path="/favorite-Activities"
+          element={<ToDos savedActivities={savedActivities} setSavedActivities={setSavedActivities} childName={childName}
+         />}
         />
         <Route path="/Activities/:id" element={<OneActivityView />} />
-        <Route
+        {/* <Route
           path="/Profile"
           element={<Profile finishedActivities={finishedActivities} />}
-        />
+        /> */}
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </main>
