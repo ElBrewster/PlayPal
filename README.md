@@ -101,6 +101,7 @@ See the [open issues](https://github.com/ElBrewster/PlayPals/issues) for a full 
 1. Adding more users
 1. More activities
 1. Printing each child's resume
+1. Adding more filters to filter search bar
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
