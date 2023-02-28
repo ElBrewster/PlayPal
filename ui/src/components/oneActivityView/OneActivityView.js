@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./OneActivityView.scss";
 import { AiFillCheckCircle, AiOutlineHeart, AiFillHeart, AiOutlineCheckCircle } from "react-icons/ai"
 import { BsBookmark, BsFillBookmarkFill } from "react-icons/bs"
@@ -25,7 +26,9 @@ export default function ActivityInfoView() {
 				<h3 className='activity-name'>{currentActivity.name}</h3>
 			</div>
 			<div className='picture-buttons'>
-				<img src={currentActivity.img_url} alt={currentActivity.name} className="activity-pic"/>
+				<Link to={`/Activities/`} style={{ textDecoration: 'none' }} className="activity-link2">
+					<img src={currentActivity.img_url} alt={currentActivity.name} className="activity-pic"/>
+				</Link>
 				<div className='buttons'>
 					{!toggle && <AiOutlineHeart onClick={handleToggle} type='button' alt='blankHeart' className="heart-icon"/>}
 					{toggle && <AiFillHeart onClick={handleToggle} type='button' alt='filledHeart' className="heart-icon"/>}
