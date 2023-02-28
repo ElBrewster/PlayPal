@@ -12,8 +12,8 @@ import ErrorPage from "../errorPage/ErrorPage";
 import { getAllActivities } from "../../apiCalls/apiCalls";
 
 function App() {
-  const [careGiverName, setCareGiverName] = React.useState('')
-  const [childName, setChildName] = React.useState('')
+  const [careGiverName, setCareGiverName] = React.useState('Parent')
+  const [childName, setChildName] = React.useState('Kiddo')
   const [activities, setActivityData] = useState([]);
   
   
@@ -50,10 +50,6 @@ function App() {
          />}
         />
         <Route path="/Activities/:id" element={<OneActivityView />} />
-        {/* <Route
-          path="/Profile"
-          element={<Profile finishedActivities={finishedActivities} />}
-        /> */}
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </main>

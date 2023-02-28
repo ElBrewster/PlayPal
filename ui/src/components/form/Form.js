@@ -2,8 +2,7 @@ import React from 'react';
 import './Form.scss'
 
 export default function Form({careGiverName, setCareGiverName, childName, setChildName}) {
-  // const [careGiverName, setCareGiverName] = React.useState('')
-  // const [childName, setChildName] = React.useState('')
+ 
  
 
     return (
