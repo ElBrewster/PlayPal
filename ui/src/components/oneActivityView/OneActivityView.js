@@ -1,5 +1,7 @@
-import React from "react";
+
+import React, { useState } from "react";
 import "./OneActivityView.scss";
+import { Link } from "react-router-dom";
 // import { BsBookmark, BsFillBookmarkFill } from "react-icons/bs"
 import { useLocation } from "react-router-dom";
 
@@ -9,17 +11,15 @@ export default function ActivityInfoView() {
 	const allActivities = location.state.activities
 	const currentActivity = allActivities.find(activity => activity.id === currentId)
 
-
-
-
-
 	return (
 		<section className='activity-info-view-container'>
 			<div className='heart-and-name'>
 				<h3 className='activity-name'>{currentActivity.name}</h3>
 			</div>
 			<div className='picture-buttons'>
-				<img src={currentActivity.img_url} alt={currentActivity.name} className="activity-pic"/>
+					<img src={currentActivity.img_url} alt={currentActivity.name} className="activity-pic"/>
+				{/* <Link to={`/Activities/`} style={{ textDecoration: 'none' }} className="activity-link2">
+				</Link> */}
 				<div className='buttons'>
 					{/* {!toggle && <AiOutlineHeart onClick={handleToggle} type='button' alt='blankHeart' className="heart-icon"/>}
 					{toggle && <AiFillHeart onClick={handleToggle} type='button' alt='filledHeart' className="heart-icon"/>}
