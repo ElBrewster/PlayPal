@@ -9,15 +9,21 @@ describe("all activities page", () => {
         .should("have.length", 10);
     });
     it("Should render activity card correctly ", () => {
+      cy.intercept(
+        {
+          method: "GET",
+          url: "https://kidsactivities.herokuapp.com/api/v1/activities/",
+        },
+        { fixture: "activities" }
+      );
+
       cy.get(".activity-container").find(".activity-card").should("be.visible");
+      cy.get(".activity-name").should("contain", "paper cutting");
 
       //have title
       //have img and icons
       //img link is correct
     });
     it("When user click activities card, it should have the correct URL", () => {});
-  });
-  describe("When API return an error", () => {
-    it("Should show error message", () => {});
   });
 });
