@@ -9,7 +9,7 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/ElBrewster/PlayPals">
+  <a href="https://play-pals-6o0yfn85r-elbrewster.vercel.app/">
 		<img alt="logo" src="./ui/public/favicon.ico"/>
   </a>
 
@@ -101,25 +101,28 @@ See the [open issues](https://github.com/ElBrewster/PlayPals/issues) for a full 
 1. Adding more users
 1. More activities
 1. Printing each child's resume
-1. Adding more filters to filter search bar
+1. Adding more filters to filter search
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
+- [![Npm][npm]][npm-url]
 - [![Javascript][javascript.js]][javascript-url]
 - [![CSS][css]][css-url]
+- [![Sass][sass]][sass-url]
 - [![HTML][html]][html-url]
+- [![Cypress][cypress]][cypress-url]
 - [![Webpack][webpack]][webpack-url]
 - [![API][api]][api-url]
-- [![Git][git]][git-url]
-- [![GitHub][github]][github-url]
-- [![React][react]][react-url]
-- [![Cypress][cypress]][cypress-url]
-- [Knex][knex-url]
 - [![Postgres][postgres]][postgres-url]
 - [![Express][express]][express-url]
 - [![Docker][docker]][docker-url]
+- [![Git][git]][git-url]
+- [![GitHub][github]][github-url]
+- [![React][react]][react-url]
+- [![React-router][react-router]][react-router-url]
+- [Knex][knex-url]
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 [el-badge]: https://img.shields.io/badge/-El%20Brewster-orange
@@ -155,3 +158,9 @@ See the [open issues](https://github.com/ElBrewster/PlayPals/issues) for a full 
 [express]:https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB
 [docker-url]:https://www.docker.com/
 [docker]:https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white
+[react-router-url]:https://reactrouter.com/en/main
+[react-router]:https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white
+[sass]:https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white
+[sass-url]: https://sass-lang.com/
+[npm]:https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white
+[npm-url]:https://www.npmjs.com/
