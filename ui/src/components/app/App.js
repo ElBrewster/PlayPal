@@ -7,21 +7,25 @@ import AllActivities from "../allActivities/AllActivities";
 import Favorites from "../favorites/Favorites";
 import OneActivityView from "../oneActivityView/OneActivityView";
 import ErrorPage from "../errorPage/ErrorPage";
-import { getAllActivities } from "../../apiCalls/apiCalls";
+// import { getAllActivities } from "../../apiCalls/apiCalls";
+import activitiesData from "../../apiCalls/dummyData";
 
 function App() {
-  const [careGiverName, setCareGiverName] = React.useState('Parent')
-  const [childName, setChildName] = React.useState('Kiddo')
+  const [careGiverName, setCareGiverName] = useState('Parent')
+  const [childName, setChildName] = useState('Kiddo')
   const [activities, setActivityData] = useState([]);
-  const [savedActivities, setSavedActivities] = useState([]);
+  // const [savedActivities, setSavedActivities] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await getAllActivities();
-      setActivityData(data);
-    };
-    fetchData();
-  }, []);
+  const [savedActivities, setSavedActivities] = useState(activitiesData.activities);
+  //added lines 16 and 19 for local work and console logged out fetch request and state holding fetch request data
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const data = await getAllActivities();
+  //     setActivityData(data);
+  //   };
+  //   fetchData();
+  // }, []);
 
   return (
     <main className="main-app">
