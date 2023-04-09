@@ -4,3 +4,4 @@ describe("When route doesn't", () => {
     cy.get("h2").should("contain", "Something went wrong...");
   });
 });
+

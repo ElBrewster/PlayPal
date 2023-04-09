@@ -1,0 +1,23 @@
+@use "src/index.scss" as *;
+
+.my-form{
+    background-color: $lightPinkPurple;
+    border-radius: $fifthBorderRadius;
+    display: flex;
+    flex-direction: column;
+    outline: none;
+    width: 14em;
+}
+
+textarea, input {
+    outline: none;
+    margin: 0.4rem 0
+}
+.input-name{
+    background-color: $lightLavendar;
+    border: .1em solid $purpleBerry;
+    border-style: solid;
+    border-radius: $fifthBorderRadius;
+    color: $blueberry;
+    outline: none;
+}

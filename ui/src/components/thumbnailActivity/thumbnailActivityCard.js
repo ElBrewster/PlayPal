@@ -1,98 +1,51 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./thumbnailActivityCard.scss";
-import {
-  AiFillCheckCircle,
-  AiOutlineHeart,
-  AiFillHeart,
-  AiOutlineCheckCircle,
-} from "react-icons/ai";
-import { BsBookmark, BsFillBookmarkFill } from "react-icons/bs";
 
-export default function ActivityCard({
-  id,
-  name,
-  startAge,
-  endAge,
-  image,
-  activities,
-}) {
-  const [toggle, setToggle] = useState(false);
+import { RiHeartAddFill } from "react-icons/ri";
+import { TiDelete } from "react-icons/ti";
 
-  const handleToggle = () => {
-    setToggle(!toggle);
-  };
+export default function ActivityCard({id, name, startAge, endAge, image, activities, savedActivities, setSavedActivities}) {
+  function addToSavedActivities(grabbedId) {
+	const checked = savedActivities.find(activity => activity.id === grabbedId);
+	if(!checked) {
+		const savedActivity = activities.find(activity => activity.id === grabbedId);
+		setSavedActivities(prevState => [...prevState, savedActivity]);
+	} else {
+		return 'oops!';
+	}
+  }
+  function removeFromSavedActivities(grabbedId){
+	const unbookMarked = savedActivities.filter(activity => activity.id !== grabbedId);
+	setSavedActivities(unbookMarked);
+  }
 
-  return (
-    <section id={id} className="activity-card">
-      <div className="title">
-        <p className="activity-name">{name}</p>
-        <p className="activity-age">
-          {startAge} months-{endAge} months
-        </p>
-      </div>
-      <div className="pics-container">
-        <Link
-          to={`/Activities/${id}`}
-          state={{ id: id, activities: activities }}
-          style={{ textDecoration: "none" }}
-          className="activity-link"
-        >
-          <img className="activity-image" src={image} alt={name} width={300} />
-        </Link>
-        <div className="tv-dials">
-          {!toggle && (
-            <AiOutlineHeart
-              className="heartmark"
-              onClick={handleToggle}
-              type="button"
-              alt="heart icon"
-            />
-          )}
-          {toggle && (
-            <AiFillHeart
-              className="heartmark2"
-              onClick={handleToggle}
-              type="button"
-              alt="filled heart icon"
-            />
-          )}
+  const handleBookMarkClickEmpty = () => {
+	addToSavedActivities(id)
+  }
 
-          {!toggle && (
-            <BsBookmark
-              className="bookmark"
-              onClick={handleToggle}
-              type="button"
-              alt="empty bookmark icon"
-            />
-          )}
-          {toggle && (
-            <BsFillBookmarkFill
-              className="bookmark2"
-              onClick={handleToggle}
-              type="button"
-              alt="filled bookmark icon"
-            />
-          )}
+  const handleBookMarkClickFull = () => {
+	removeFromSavedActivities(id);
+  }
 
-          {!toggle && (
-            <AiOutlineCheckCircle
-              className="check-circle"
-              onClick={handleToggle}
-              type="button"
-              alt="empty checkmark circle icon"
-            />
-          )}
-          {toggle && (
-            <AiFillCheckCircle
-              className="check-circle2"
-              onClick={handleToggle}
-              type="button"
-              alt="filled checkmark circle icon"
-            />
-          )}
-        </div>
-      </div>
-    </section>
-  );
-}
+	return (
+		<section id={id} className='activity-card' >
+				<div className='title'>
+					<p className='activity-name'> {name} </p>
+					<p className="activity-age"> {startAge} months-{endAge} months </p>
+				</div>
+				<div className="pics-container">
+					<Link to={`/Activities/${id}`} state={{id: id, activities: activities}} style={{ textDecoration: 'none' }} className="activity-link">
+						<img className="activity-image" src={image} alt={name} width={300} />
+					</Link>
+					<div className="tv-dials">
+                    <button className="invis-button" onClick={handleBookMarkClickEmpty}>
+                        <RiHeartAddFill className="heartmark2" alt="heart plus icon" />
+                    </button>
+					<button className="invis-button" onClick={handleBookMarkClickFull}>
+                        <TiDelete className="bookmark2" alt="remove icon" />
+                    </button>
+					</div>
+				</div>
+		</section>
+	)

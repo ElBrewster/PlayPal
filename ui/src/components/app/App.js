@@ -1,20 +1,20 @@
 import "./App.scss";
-import activitiesData from "../../apiCalls/dummyData";
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import HeaderNav from "../headerNav/HeaderNav";
 import LandingPage from "../landingPage/LandingPage";
 import AllActivities from "../allActivities/AllActivities";
-import ToDos from "../todo/ToDos";
+import Favorites from "../favorites/Favorites";
 import OneActivityView from "../oneActivityView/OneActivityView";
-import Profile from "../profile/Profile";
 import ErrorPage from "../errorPage/ErrorPage";
 import { getAllActivities } from "../../apiCalls/apiCalls";
 
 function App() {
+  const [careGiverName, setCareGiverName] = React.useState('Parent')
+  const [childName, setChildName] = React.useState('Kiddo')
   const [activities, setActivityData] = useState([]);
+  const [savedActivities, setSavedActivities] = useState([]);
 
-  //ApiCall
   useEffect(() => {
     const fetchData = async () => {
       const data = await getAllActivities();
@@ -23,36 +23,24 @@ function App() {
     fetchData();
   }, []);
 
-  console.log("App activities", activities);
-  //allActivityData, function
-
-  //Pass down these functions and have toggle add/spread in selections. State of filtered/favorites/to-do will be here.
-  //filtered favorites, favorites function ...favorites (heart)
-  const [favorites, setFavorites] = useState([]);
-
-  //filtered to-do (bookmark)
-  const [savedActivities, setSavedActivities] = useState([]);
-
-  //filtered finished, for profile/resume calculations (and possible third emoji on AllActivities list?)
-  const [finishedActivities, setFinishedActivities] = useState([]);
   return (
     <main className="main-app">
       <HeaderNav />
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<LandingPage careGiverName={careGiverName} 
+            setCareGiverName={setCareGiverName}
+            childName={childName}
+            setChildName={setChildName}/>} />
         <Route
-          path="/Activities"
-          element={<AllActivities activities={activities} />}
+          path="/dashboard"
+          element={<AllActivities activities={activities} savedActivities={savedActivities} setSavedActivities={setSavedActivities}/>}
         />
         <Route
-          path="/Saved-Activities"
-          element={<ToDos savedActivities={savedActivities} />}
+          path="/favorite-Activities"
+          element={<Favorites savedActivities={savedActivities} setSavedActivities={setSavedActivities} childName={childName}
+         />}
         />
         <Route path="/Activities/:id" element={<OneActivityView />} />
-        <Route
-          path="/Profile"
-          element={<Profile finishedActivities={finishedActivities} />}
-        />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </main>

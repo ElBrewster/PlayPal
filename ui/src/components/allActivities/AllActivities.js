@@ -1,14 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
 import "./AllActivities.scss";
 import ActivityCard from "../thumbnailActivity/thumbnailActivityCard";
 
-export default function AllActivities({ activities }) {
+export default function AllActivities({ activities, savedActivities, setSavedActivities }) {
   const [selectedActivities, setSelectedActivities] = useState(activities);
-  useEffect(() => {
-    setSelectedActivities(activities);
-  }, [activities]);
 
   const animatedComponents = makeAnimated();
 
@@ -26,7 +23,6 @@ export default function AllActivities({ activities }) {
     const filteredActivities = activities.filter((act) => {
       return arrayOfInput.every((input) => act[input.value] === true);
     });
-
     setSelectedActivities(filteredActivities);
   };
 
@@ -45,6 +41,8 @@ export default function AllActivities({ activities }) {
         outdoor={activity.outdoor}
         motorSkill={activity.motor_skills}
         activities={activities}
+        savedActivities={savedActivities}
+        setSavedActivities={setSavedActivities}
       />
     );
   });

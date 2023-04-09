@@ -1,4 +1,5 @@
 describe("profile page", () => {
+
   beforeEach(() => {
     cy.visit("http://localhost:3000/Profile");
   });
@@ -15,3 +16,4 @@ describe("profile page", () => {
     // Once we have import activities booked mark, sad path will be having response message where there's no activities
   });
 });
+

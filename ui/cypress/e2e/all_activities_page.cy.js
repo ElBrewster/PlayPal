@@ -1,4 +1,5 @@
 describe("all activities page", () => {
+
   beforeEach(() => {
     cy.visit("http://localhost:3000/activities");
   });
@@ -27,3 +28,4 @@ describe("all activities page", () => {
     it("When user click activities card, it should have the correct URL", () => {});
   });
 });
+

@@ -15,29 +15,33 @@
 }
 
 .activity-name{
-	background-color: $pink;
+	background-color: $lightBlue;
 	color: $blueberry;
 	margin: 0px;
 }
 
-.heart-icon,
-.check-icon,
-.bookmark-icon {
+.pink-box{
+	background-color: $pink;
+	border-top: .1em solid $blueberry;
+	height: 1em;
+	width: 100%;
+}
+
+.dot{
 	background-color: $pink;
 	color: $blueberry;
-	height: 2em;
-	width: 2em;
 }
 
 .picture-buttons{
-	align-items: center;
-	background-color: $pink;
+
+	background-color: $lightBlue;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-evenly;
 	width: 100%;
 }
 .activity-pic{
+	align-self: center;
 	border: .1em solid $blueberry;
 	border-radius: $fifthBorderRadius;
 	margin-top: .8em;
@@ -66,10 +70,7 @@
 	width: 100%;
 }
 .heart-and-name{
-	align-items: flex-end;
-	background-color: $pink;
-	display: flex;
-	justify-content: space-around;
+	background-color: $lightBlue;
 	width: 100%;
 }
 
