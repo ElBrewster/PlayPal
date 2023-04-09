@@ -1,6 +1,7 @@
 import React from "react";
 import ActivityCard from "../thumbnailActivity/thumbnailActivityCard";
-import "./Favorites.scss";
+// import "./Favorites.scss";
+import styles from "./Favorites.module.css";
 
 export default function Favorites({ activities, savedActivities, setSavedActivities, childName }) {
   
@@ -27,8 +28,8 @@ export default function Favorites({ activities, savedActivities, setSavedActivit
 
     return (
         <>
-          <h2 className="to-do-h2">{childName}'s Favorite Activities</h2>
-          <section className="to-do-container">
+          <h2 className={styles.toDoH2}>{childName}'s Favorite Activities</h2>
+          <section className={styles.toDoContainer}>
             {activityCards}
           </section>
         </>

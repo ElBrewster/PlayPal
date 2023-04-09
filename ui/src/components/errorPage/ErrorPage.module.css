@@ -1,0 +1,17 @@
+.errorPage {
+    background-color: #d5d8fc;
+    color: #050f99;
+}
+
+.errorMessage {
+    padding: 2em;
+}
+.errorBackButton {
+    background-color: #fd9e94;
+    border: .1em solid #fa5dfd;
+    border-radius: .2em;
+    color: #d51655;
+    font-weight: 600;
+    height: 3em;
+    width: 15em;
+}

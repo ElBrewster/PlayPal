@@ -1,0 +1,97 @@
+.activityInfoViewContainer {
+	align-items: center;
+	background-color: #fd9e94;
+	border: .1em solid #07399b;
+	border-radius: .2em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin-top: 1em;
+	max-width: 40em;
+	min-width: 280px;
+	width: 90%;
+}
+
+.activityName {
+	background-color: #a6d7fb;
+	color: #07399b;
+	margin: 0px;
+}
+
+.pinkBox {
+	background-color: #fd9e94;
+	border-top: .1em solid #07399b;
+	height: 1em;
+	width: 100%;
+}
+
+.dot {
+	background-color: #fd9e94;
+	color: #07399b;
+}
+
+.pictureButtons {
+
+	background-color: #a6d7fb;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	width: 100%;
+}
+
+.activityPic {
+	align-self: center;
+	border: .1em solid #07399b;
+	border-radius: .2em;
+	margin-top: .8em;
+	margin-bottom: .8em;
+	width: 55%;
+	
+}
+
+.boldSpan {
+	font-weight: 700;
+}
+
+.boldSpan,
+.activityAge,
+.activityMaterials,
+.activityInstrux {
+	background-color: #a6d7fb;
+	color: #07399b;
+	width: 100%;
+}
+
+.information {
+	background-color: #fd9e94;
+	border-top: .1em solid #07399b;
+	border-radius: .2em;
+	width: 100%;
+}
+
+.heartAndName {
+	background-color: #a6d7fb;
+	width: 100%;
+}
+
+.buttons {
+	align-items: center;
+	background-color: #fd9e94;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: space-evenly;
+}
+
+@media (min-width: 40em) {
+	.activityInfoViewContainer {
+		align-items: center;
+		display: flex;
+	}
+	.heartIcon,
+	.checkIcon,
+	.bookmarkIcon {
+		height: 3em;
+		width: 3em;
+	} 
+}

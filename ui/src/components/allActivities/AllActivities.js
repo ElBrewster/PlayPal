@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
-import "./AllActivities.scss";
+import styles from "./AllActivities.module.css";
 import ActivityCard from "../thumbnailActivity/thumbnailActivityCard";
 
 export default function AllActivities({ activities, savedActivities, setSavedActivities }) {
@@ -48,7 +48,7 @@ export default function AllActivities({ activities, savedActivities, setSavedAct
   });
 
   return (
-    <section className="all-activities-section">
+    <section className={styles.allActivitiesSection}>
       <Select
         closeMenuOnSelect={false}
         components={animatedComponents}
@@ -56,7 +56,7 @@ export default function AllActivities({ activities, savedActivities, setSavedAct
         options={activityOptions}
         onChange={(e) => showFilteredActivities(e)}
       />
-      <div className="activity-container">{activityCards}</div>
+      <div className={styles.activityContainer}>{activityCards}</div>
     </section>
   );
 }
