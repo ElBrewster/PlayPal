@@ -13,18 +13,18 @@
 		<img alt="logo" src="./ui/public/favicon.ico"/>
   </a>
 
-<h3 align="center">PlayPals</h3>
+<h3 align="center">PlayPal</h3>
 <img width="416" alt="Screen Shot 2023-02-27 at 8 44 21 PM" src="https://user-images.githubusercontent.com/113723085/221756939-eb2dde5f-a79d-4fc1-b395-f9b4ad66aebf.png">
 
   <p align="center">
-   PlayPals
+   PlayPal
     <br />
-    <a href="https://github.com/ElBrewster/PlayPals"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/ElBrewster/PlayPal"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/ElBrewster/PlayPals/issues">Report Bug</a>
+    <a href="https://github.com/ElBrewster/PlayPal/issues">Report Bug</a>
     ·
-    <a href="https://github.com/ElBrewster/PlayPals/issues">Request Feature</a>
+    <a href="https://github.com/ElBrewster/PlayPal/issues">Request Feature</a>
   </p>
 </div>
 
@@ -55,7 +55,7 @@
 <img src="./ui/public/preview.png" alt="preview"/>
 
 ### abstract 
-PlayPals is the perfect app for first time moms who are struggling to come up with ideas on safe, fun, and stimulating activities for their child. PlayPals gives a list of activities with that can be filtered through to give you ideas for inside or outside play. The activities are also seperated by gross and fine motor skills.
+PlayPal is the perfect app for first time moms who are struggling to come up with ideas on safe, fun, and stimulating activities for their child. PlayPal gives a list of activities with that can be filtered through to give you ideas for inside or outside play. The activities are also separated by gross and fine motor skills.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
