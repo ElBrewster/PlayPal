@@ -1,18 +1,16 @@
-@use "src/index.scss" as *;
-
-.header-container {
+.headerContainer {
     align-items: center;
-    background-color: $lightLavendar;
-    color: $purpleBerry;
+    background-color: #d5d8fc;
+    color: #050f99;
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
 }
 
-.header-nav{
+.headerNav {
     align-items: center;
-    border-bottom: 2px solid $cherry;
+    border-bottom: 2px solid #cd2048;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -26,34 +24,34 @@
     height: 3em;
 }
 
-.invis-button{
+.invisButton {
     background-color: rgb(0,0,0,0);
     border: none;
-    color: $purpleBerry;
+    color: #050f99;
 }
 
-.main-title{
-    color: $cherry;
+.mainTitle {
+    color: #cd2048;
     font-size: 3em;
     margin: 0;
 }
 
 @media (min-width: 40em) {
-    .header-container{
-        border-bottom: .2em solid $cherry;
+    .headerContainer {
+        border-bottom: .2em solid #cd2048;
         min-height: 70px;
     }
-    .header-nav{
+    .headerNav {
         display: flex;
         height: 100%;
         justify-content: space-evenly;
     }
     .clipboard,
-    .dude{
+    .dude {
         height: 4em;
         width: 4em;
     }
-    .main-title{
+    .mainTitle {
         font-size: 3.5em;
     }
 }

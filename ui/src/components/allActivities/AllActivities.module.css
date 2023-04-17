@@ -1,16 +1,14 @@
-@use "src/index.scss" as *;
-
-.all-activities-section {
+.allActivitiesSection {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 }
 
-.activity-container {
+.activityContainer {
 	align-items: center;
-	background-color: $lightLavendar;
-	border: $oceanBorder;
-  	border-radius: $fifthBorderRadius;
+	background-color: #d5d8fc;
+	border: #40cee7;
+  	border-radius: .2em;
   	padding: 20px;
   	display: flex;
 	flex-direction: column;
@@ -18,7 +16,7 @@
 }
 
 @media (min-width: 40em) {
-	.activity-container {
+	.activityContainer {
 		display: grid;
 		gap: 1em;
 		grid-template-columns: 1fr 1fr 1fr;

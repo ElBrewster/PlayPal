@@ -1,12 +1,13 @@
 import React from 'react';
-import './Form.scss'
+// import './Form.scss'
+import styles from "./Form.module.css";
 
 export default function Form({careGiverName, setCareGiverName, childName, setChildName}) { 
 
     return (
-      <form className="my-form">
+      <form className={styles.myForm}>
         <input
-          className="input-name"
+          className={styles.inputName}
           type='text'
           placeholder='Your Name'
           name='care-giver'
@@ -14,7 +15,7 @@ export default function Form({careGiverName, setCareGiverName, childName, setChi
           onChange={event => setCareGiverName(event.target.value)}
         />
         <input
-          className="input-name"
+          className={styles.inputName}
           type='text'
           placeholder="Your Child's Name"
           name='child'

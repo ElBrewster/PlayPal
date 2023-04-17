@@ -1,0 +1,21 @@
+.myForm {
+    background-color: #f2b6e7;
+    border-radius: .2em;
+    display: flex;
+    flex-direction: column;
+    outline: none;
+    width: 14em;
+}
+
+textarea, input {
+    outline: none;
+    margin: 0.4rem 0
+}
+.inputName {
+    background-color: #d5d8fc;
+    border: .1em solid #050f99;
+    border-style: solid;
+    border-radius: .2em;
+    color: #07399b;
+    outline: none;
+}

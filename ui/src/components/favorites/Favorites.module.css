@@ -1,22 +1,20 @@
-@use "src/index.scss" as *;
-
-.to-do-container {
+.toDoContainer {
 	align-items: center;
-	border: $oceanBorder;
-	border-radius: $fifthBorderRadius;
-	color: $purpleBerry;
+	/* border: .1em solid #40cee7; */
+	border-radius: .2em;
+	color: #050f99;
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
 	width: 100%;
 }
 
-.to-do-h2 {
-	color: $purpleBerry;
+.toDoH2 {
+	color: #050f99;
 }
 
 @media (min-width: 40em) {
-	.to-do-container {
+	.toDoContainer {
 		display: grid;
 		gap: 1em;
 		grid-template-columns: 1fr 1fr 1fr;

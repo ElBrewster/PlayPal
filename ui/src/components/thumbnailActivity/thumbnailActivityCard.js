@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./thumbnailActivityCard.scss";
+// import "./thumbnailActivityCard.scss";
+import styles from "./thumbnailActivityCard.module.css";
 import { RiHeartAddFill } from "react-icons/ri";
 import { TiDelete } from "react-icons/ti";
 
@@ -31,21 +32,21 @@ export default function ActivityCard({id, name, startAge, endAge, image, activit
   }
 
 	return (
-		<section id={id} className='activity-card' >
-				<div className='title'>
-					<p className='activity-name'> {name} </p>
-					<p className="activity-age"> {startAge} months-{endAge} months </p>
+		<section id={id} className={styles.activityCard} >
+				<div className={styles.title}>
+					<p className={styles.activityName}> {name} </p>
+					<p className={styles.activityAge}> {startAge} months-{endAge} months </p>
 				</div>
-				<div className="pics-container">
+				<div className={styles.picsContainer}>
 					<Link to={`/Activities/${id}`} state={{id: id, activities: activities}} style={{ textDecoration: 'none' }} className="activity-link">
-						<img className="activity-image" src={image} alt={name} width={300} />
+						<img className={styles.activityImage} src={image} alt={name} width={300} />
 					</Link>
-					<div className="tv-dials">
-                    <button className="invis-button" onClick={handleBookMarkClickEmpty}>
-                        <RiHeartAddFill className="heartmark2" alt="heart plus icon" />
+					<div className={styles.tvDials}>
+                    <button className={styles.invisButton} onClick={handleBookMarkClickEmpty}>
+                        <RiHeartAddFill className={styles.heartmark2} alt="heart plus icon" />
                     </button>
-					<button className="invis-button" onClick={handleBookMarkClickFull}>
-                        <TiDelete className="bookmark2" alt="remove icon" />
+					<button className={styles.invisButton} onClick={handleBookMarkClickFull}>
+                        <TiDelete className={styles.bookmark2} alt="remove icon" />
                     </button>
 					</div>
 				</div>
